@@ -9,8 +9,8 @@ import angular from 'angular';
 })
 export class MyComponent {
   @Element() private host: HTMLElement;
-  @Prop() firstName: string;
-  @Prop() lastName: string;
+  @Prop({ mutable: true }) firstName: string;
+  @Prop({ mutable: true }) lastName: string;
 
 
   componentDidLoad() {

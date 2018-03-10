@@ -20,6 +20,36 @@ declare global {
 
 
 import {
+  MyComponent as ChartWrapper
+} from './components/chart-wrapper/chart-wrapper.component';
+
+declare global {
+  interface HTMLChartWrapperElement extends ChartWrapper, HTMLStencilElement {
+  }
+  var HTMLChartWrapperElement: {
+    prototype: HTMLChartWrapperElement;
+    new (): HTMLChartWrapperElement;
+  };
+  interface HTMLElementTagNameMap {
+    "chart-wrapper": HTMLChartWrapperElement;
+  }
+  interface ElementTagNameMap {
+    "chart-wrapper": HTMLChartWrapperElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "chart-wrapper": JSXElements.ChartWrapperAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ChartWrapperAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   MyComponent as HelloComponent
 } from './components/my-component/my-component';
 

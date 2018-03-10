@@ -1,0 +1,8 @@
+chart-wrapper {
+  display: block;
+  height: 400px;
+}
+ng-chart-wrapper {
+  display: block;
+  height: 100%;
+}

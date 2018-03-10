@@ -1,6 +1,6 @@
 {
   "name": "stencil-wrapped-angularjs-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Stencil Component Starter",
   "main": "dist/mycomponent.js",
   "types": "dist/types/index.d.ts",
@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "@stencil/core": "^0.6.18",
-    "angular": "^1.6.9"
+    "angular": "^1.6.9",
+    "angular-chart.js": "^1.1.1",
+    "chart.js": "^2.7.2"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
