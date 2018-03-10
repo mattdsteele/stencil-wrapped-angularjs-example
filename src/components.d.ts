@@ -20,31 +20,31 @@ declare global {
 
 
 import {
-  MyComponent as MyComponent
+  MyComponent as HelloComponent
 } from './components/my-component/my-component';
 
 declare global {
-  interface HTMLMyComponentElement extends MyComponent, HTMLStencilElement {
+  interface HTMLHelloComponentElement extends HelloComponent, HTMLStencilElement {
   }
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLHelloComponentElement: {
+    prototype: HTMLHelloComponentElement;
+    new (): HTMLHelloComponentElement;
   };
   interface HTMLElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
+    "hello-component": HTMLHelloComponentElement;
   }
   interface ElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
+    "hello-component": HTMLHelloComponentElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-component": JSXElements.MyComponentAttributes;
+      "hello-component": JSXElements.HelloComponentAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
+    export interface HelloComponentAttributes extends HTMLAttributes {
+      firstName?: string;
+      lastName?: string;
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "my-component",
+  "name": "stencil-wrapped-angularjs-example",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/mycomponent.js",
@@ -18,17 +18,19 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "^0.6.18"
+    "@stencil/core": "^0.6.18",
+    "angular": "^1.6.9"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
+    "@types/angular": "^1.6.43",
     "@types/jest": "^21.1.1",
     "jest": "^21.2.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git@github.com:mattdsteele/stencil-wrapped-angularjs-example.git"
   },
   "author": "Ionic Team",
   "license": "MIT",

@@ -1,19 +1,27 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Element, Prop } from '@stencil/core';
+import '../angular-comp';
+import angular from 'angular';
 
 @Component({
-  tag: 'my-component',
+  tag: 'hello-component',
   styleUrl: 'my-component.css',
-  shadow: true
+  shadow: false
 })
 export class MyComponent {
+  @Element() private host: HTMLElement;
+  @Prop() firstName: string;
+  @Prop() lastName: string;
 
-  @Prop() first: string;
-  @Prop() last: string;
 
+  componentDidLoad() {
+    const shadowRoot = this.host;
+    angular.bootstrap(shadowRoot, ['wrapped']);
+
+  }
   render() {
     return (
       <div>
-        Hello, World! I'm {this.first} {this.last}
+        <example-component first-input={this.firstName} second-input={this.lastName.toUpperCase()} />
       </div>
     );
   }
